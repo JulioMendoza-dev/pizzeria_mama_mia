@@ -14,21 +14,21 @@ function Home() {
           <CardPizza 
           imagen="pizza-hawaii.jpg  "
           name="Hawaiiana "
-          ingredients={["mozzarella ", "tomates ", "jamón ", "orégano"]}
+          ingredients={["mozzarella ", "tomates ", "jamón ", "piña"]}
           price="17.000"/>       
         </div>
         <div className='col'>
           <CardPizza 
           imagen="margarita.png"
           name="Margarita "
-          ingredients={["mozzarella ", "tomates ", "jamón ", "orégano"]}
+          ingredients={["mozzarella ", "tomates cherry ", "albahaca "]}
           price="18.000"/>       
         </div>
         <div className='col'>
           <CardPizza 
           imagen="napolitana.jpg"
           name="napolitana"
-          ingredients={["mozzarella ", "tomates ", "jamón ", "orégano"]}
+          ingredients={["mozzarella ", "tomates ", "jamón ", "aceituna"]}
           price="17.500"/>       
         </div>
       </div>
