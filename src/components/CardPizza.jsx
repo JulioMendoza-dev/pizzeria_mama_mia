@@ -1,8 +1,9 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 function CardPizza(props) {
  const {imagen, name, ingredients,price } = props 
- const sesion = true
+ const sesion = false
   return (
     <>
       <div className="card text-white p-2 bg-success">

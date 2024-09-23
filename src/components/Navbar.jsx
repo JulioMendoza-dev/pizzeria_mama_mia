@@ -3,7 +3,7 @@ import React from 'react'
 
 function Navbar() {
   const total = 25000;
-  const token = false
+  const token = true
   return (
    <>
     <nav className="navbar navbar-expand-lg bg-dark">
@@ -12,8 +12,8 @@ function Navbar() {
     <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
       <span className="navbar-toggler-icon"></span>
     </button>
-    <div className="collapse navbar-collapse "  id="navbarNav" >   
-       {token ? <ul className="navbar-nav gap-5 ">       
+    <div className="collapse navbar-collapse "  id="navbarNav">   
+       {token ? <ul className="navbar-nav gap-5">       
         <li className="nav-item">
           <a className="nav-link text-white active border border-warning" aria-current="page" href="#"><img src="/trozo-pizza.webp"  
           width="25" height="20"/> Home</a>
