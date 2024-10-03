@@ -4,10 +4,14 @@ function Login() {
     const [inputEmail, setInputEmail] = useState("");
     const [inputPassword, setInputPassword] = useState("");
 
-    const handleInputEamail = (e)=>{ 
-      setInputEmail(e.target.value)}
-    const handleInputPassword = (e)=>{ 
-      setInputPassword(e.target.value)}
+    const handleInputEamail = (e)=>{ setInputEmail(e.target.value)}
+    const handleInputPassword = (e)=>{ setInputPassword(e.target.value)}
+
+    const camposRellenos = ()=> {
+      if(inputEmail === "" & inputPassword ===""){
+          alert("rellena los campos")
+      }
+    }
 
   return (
   <div>
@@ -25,7 +29,7 @@ function Login() {
       <input type="password" placeholder="Enter your password" className="form-control" id="inputPassword" onChange={handleInputPassword}/>
     </div>
    
-    <button type="submit" className="btn btn-primary">Login </button>
+    <button type="submit" className="btn btn-primary" onClick={camposRellenos}>Login </button>
     </form>
 
   </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 
 function CardPizza(props) {
- const {imagen, name, ingredients,price } = props 
+ const {imagen, name, ingredients, price } = props 
  const sesion = false
   return (
     <>

@@ -1,37 +1,42 @@
 import React,{ useState } from 'react'
 
-function RegisterPage() {
+function Register() {
     const [inputEmail, setInputEmail] = useState("");
     const [inputUsername, setInputUsername] = useState("");
     const [inputPassword, setInputPassword] = useState("");
     const [inputPassword2, setInputPassword2] = useState("");
-    // const validarInput = (e) => {
-    //     e.preventDefault(); //para evitar que recargue la pagina
 
-    //     // if (inputEmail.includes("@")){
-    //     //     alert("formato de correo es incorrecto!")
-    //     //     setError(true)
-    //     // }
-
-    //     // if (inputEmail === "" || inputPassword === "" || InputPassword2 === ""){
-    //     //     setError(true)
-    //     //     return
-    //     // }
-    //     // setError(false)
-    //     // setInputEmail("");
-    //     // setInputPassword("");
-    //     // setInputPassword2("");
-    // }
     const handleInpuEmail = (e) =>{ setInputEmail(e.target.value)}
     const handleInputUsername = (e) =>{ setInputUsername(e.target.value)}
     const handleInputPassword = (e) =>{ setInputPassword(e.target.value)}
     const handleInputPassword2 = (e) =>{setInputPassword2(e.target.value)}
+
+    const handleForm = () =>{
+        if(!inputEmail.includes("@")){
+            alert("el correo debe incuir un @")
+            return
+        }
+        if(inputUsername.length < 6){
+            alert("el nombre de usuario debe tener mas de 6 caracteres y solo letras")
+            return
+        }
+        if(inputPassword.length < 6){
+            alert("la contraseña debe mas de 8 caracteres")
+            return
+        }
+        if(!inputPassword2 === inputPassword){
+            alert("las contraseñas deben ser iguales")
+            return
+        }
+        alertI("te has registrado con exito!")
+    }
+
   return (
     <div className='container' style={{height:"350px", width:"80%" }}>
 
         <h3 style={{textAlign:"center", marginTop:"30px"}} >Register</h3>
 
-    <form className="form " style={{height:"450px", paddingBottom:"20px"}} >
+    <form className="form " style={{height:"450px", marginBottom:"20px"}} >
 
         <div className="mb-3">
             <label htmlFor="inputEmail" className="form-label">Email address</label>
@@ -43,7 +48,7 @@ function RegisterPage() {
 
         <div className="mb-3">
             <label htmlFor="inputUsername" className="form-label">User name</label>
-            <input type="password" className="form-control" id="inputUsername" onChange={handleInputUsername} />
+            <input type="string" className="form-control" id="inputUsername" onChange={handleInputUsername} />
         </div>
 
         <div className="mb-3">
@@ -56,10 +61,10 @@ function RegisterPage() {
             <input type="password" className="form-control" id="inputPassword2" onChange={handleInputPassword2}/>
         </div>
 
-        <button type="submit" className="btn btn-primary">Submit</button>        
+        <button className="btn btn-primary" onClick={handleForm}>Submit</button>        
     </form>
     </div>
   )
 }
 
-export default RegisterPage
+export default Register
