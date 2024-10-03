@@ -29,6 +29,9 @@ function Register() {
             alert("las contraseñas deben ser iguales")
             return
         }
+        if(inputEmail === "" || inputUsername ==="" || inputPassword === "" || inputPassword2 === "" ){
+            alert("todos los campos deben ser completados")
+        }
         alert("te has registrado con exito!")
         setRegistrado(true)
     }
