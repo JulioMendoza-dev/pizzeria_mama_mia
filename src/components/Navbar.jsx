@@ -3,7 +3,7 @@ import React from 'react'
 
 function Navbar() {
   const total = 25000;
-  const token = true
+  const token = false
   return (
    <>
     <nav className="navbar navbar-expand-lg bg-dark">

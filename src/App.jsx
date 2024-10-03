@@ -3,13 +3,14 @@ import CardPizza from "./components/CardPizza"
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar"
-import Header from "./components/Header"
+import RegisterPage from './components/RegisterPage';
 
 function App() {
   return (
     <>
     <Navbar />
     <Home />
+    <RegisterPage/>
     <Footer />
     </>
   )

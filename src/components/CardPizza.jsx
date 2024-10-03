@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from './Navbar'
 
 function CardPizza(props) {
  const {imagen, name, ingredients,price } = props 
@@ -19,7 +18,7 @@ function CardPizza(props) {
                     <button type="button" class="btn btn-primary border-white "><h4><strong>Comprar </strong></h4></button>
                   </div>
                 : <div className="card-body ">
-                    <button type="button" class="btn btn-primary border-white">Iniciar sesion</button>
+                    <button type="button" class="btn btn-primary border-white">Iniciar Sesion</button>
                   </div>}  
       </div>
     </>
