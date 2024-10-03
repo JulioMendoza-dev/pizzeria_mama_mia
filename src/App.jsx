@@ -7,10 +7,10 @@ import Register from './components/Register';
 function App() {
   return (
     <>
-    <Navbar />
-    <Home />
+    <Navbar/>
+    <Home/>
     <Register/>
-    <Footer />
+    <Footer/>
     </>
   )
 }
