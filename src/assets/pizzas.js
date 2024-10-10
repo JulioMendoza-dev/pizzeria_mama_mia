@@ -49,3 +49,4 @@ export const pizzas = [
 
   },
 ];
+ export default pizzas

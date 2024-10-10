@@ -1,23 +1,21 @@
-import React from 'react'
+import React from "react";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
-import Navbar from "./components/Navbar"
-import Register from './components/Register';
-import Cart from './components/Cart';
-
+import Navbar from "./components/Navbar";
+import Register from "./components/Register";
+import Cart from "./components/Cart";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <>
-    <Navbar />
-    <Home/>
-    <Register/>                     
-    <Cart/>
-    <Footer/>
+      <Navbar />
+      <Home />
+      <Register />
+      <Cart />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
-
- 
+export default App;
