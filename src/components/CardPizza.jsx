@@ -1,28 +1,37 @@
-import React from 'react'
+import { Button, Card } from "react-bootstrap"
+import PropTypes from "prop-types"
 
-function CardPizza(props) {
- const {imagen, name, ingredients, price } = props 
- const sesion = false
+const CardPizza = ({pizza}) => {
+    const {nombre, precio, ingredientes} = pizza
+
   return (
     <>
-      <div className="card text-white p-2 bg-success">
-        <img  src={imagen} className="card-img-top mt-2 bg-white" />
-        <div className="card-body bg-success text-center ">
-          <h4 className="card-title text-white m-3 text-center ">{name}</h4>
-          <p className="card-text text-white"><h4>Ingredientes :   {ingredients}</h4></p>
-        </div>
-        <ul className="list-group list-group-flush ">
-          <li className="list-group-item bg-warning text-center text-black"><h4>Precio  = ${price}</h4></li>
-        </ul>
-        {sesion ? <div className="card-body">
-                    <button type="button" class="btn btn-primary border-white "><h4><strong>Comprar </strong></h4></button>
-                  </div>
-                : <div className="card-body ">
-                    <button type="button" class="btn btn-primary border-white">Iniciar Sesion</button>
-                  </div>}  
-      </div>
+      <Card>
+      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Body>
+          <Card.Title>{nombre}</Card.Title>
+          <Card.Text>
+              {new Intl.NumberFormat('es-CL',{style:'currency', currency:'CLP'}).format(
+              precio)}
+          </Card.Text>
+          <Card.Text>{ingredientes}</Card.Text>
+              <Button variant="primary" style={{marRight:"20%", alignContent:"flex-end"}}>+</Button>
+              <Button variant="warning" style={{marLeft:"20%", alignContent:"flex-start"}}>-</Button>
+      </Card.Body>
+      </Card>
     </>
   )
+}
+
+  CardPizza.propTypes = {
+    producto: PropTypes.shape({
+        id: PropTypes.string,
+        nombre: PropTypes.string,
+        precio: PropTypes.number,
+        ingredientes: PropTypes.string,
+
+    })
+
 }
 
 export default CardPizza

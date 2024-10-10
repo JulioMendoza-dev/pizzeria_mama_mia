@@ -1,35 +1,31 @@
-import React from 'react'
+import React from 'react-boostrap'
 import Header from "./Header"
 import CardPizza from "./CardPizza"
 import Row from './Row'
-import Login from './Login'
+import pizzas from "../assets/pizzas"
 
 function Home() {
+  const mapeoPizzas = pizzas.map((pizza) =>{
+    return( 
+      <Col key={pizza.id}>
+          <CardPizza 
+          pizza={pizza}
+          />
+      </Col>)
+})
   return (
     <>
       <Header  />
       <div className='fondo bg-success-subtle'>
       <div className='container'>
       <Login/>
-      <Row>  
-          <CardPizza 
-            imagen="pizza-hawaii.jpg  "
-            name="Hawaiiana "
-            ingredients={["mozzarella ", "tomates ", "jamón ", "piña"]}
-            price="17.000"/>       
-          <CardPizza 
-            imagen="margarita.png"
-            name="Margarita "
-            ingredients={["mozzarella ", "tomates cherry ", "albahaca "]}
-            price="18.000"/>       
-          <CardPizza 
-            imagen="napolitana.jpg"
-            name="napolitana"
-            ingredients={["mozzarella ", "tomates ", "jamón ", "aceituna"]}
-            price="17.500"/>       
-      </Row>
-    </div>
-    </div>
+      <Container >
+        <Row className="g-4" xs={1} md={2} lg={4}>        
+               {mapeoPizzas}            
+        </Row>
+       </Container>
+      </div>
+      </div>
    </>
   )
 }
