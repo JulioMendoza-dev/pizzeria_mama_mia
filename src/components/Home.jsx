@@ -3,7 +3,7 @@ import CardPizza from "./CardPizza";
 import Row from "./Row";
 import pizzas from "../assets/pizzas";
 import { Col } from "react-bootstrap";
-import Login from "./Login";
+import Login from "./pages/Login";
 import {Container} from "react-bootstrap";
 
  const Home = () => {

@@ -62,6 +62,7 @@ function Register() {
 
           <form className="form " style={{ height: "450px" }}>
             <div className="mb-3">
+              
               <label htmlFor="inputEmail" className="form-label">
                 Email address
               </label>
@@ -75,6 +76,7 @@ function Register() {
                 Tus datos no seran compartidos.
               </div>
             </div>
+            
             <div className="mb-3">
               <label htmlFor="inputUsername" className="form-label">
                 User name
