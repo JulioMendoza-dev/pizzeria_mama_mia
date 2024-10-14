@@ -44,7 +44,7 @@ function Navbar() {
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-lock"
+                      className="bi bi-lock"
                       viewBox="0 0 16 16"
                     >
                       <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1" />
@@ -62,7 +62,7 @@ function Navbar() {
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-lock"
+                      className="bi bi-lock"
                       viewBox="0 0 16 16"
                     >
                       <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1" />
@@ -92,7 +92,7 @@ function Navbar() {
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-lock"
+                      className="bi bi-lock"
                       viewBox="0 0 16 16"
                     >
                       <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1" />
@@ -110,7 +110,7 @@ function Navbar() {
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-lock"
+                      className="bi bi-lock"
                       viewBox="0 0 16 16"
                     >
                       <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1" />
@@ -122,7 +122,7 @@ function Navbar() {
             )}
 
             <button
-              class="btn btn-outline-warning m-5 position-absolute bottom-2 end-0"
+              className="btn btn-outline-warning m-5 position-absolute bottom-2 end-0"
               type="button"
             >
               <svg
@@ -130,7 +130,7 @@ function Navbar() {
                 width="16"
                 height="16"
                 fill="currentColor"
-                class="bi bi-cart"
+                className="bi bi-cart"
                 viewBox="0 0 16 16"
               >
                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />

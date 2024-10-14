@@ -56,13 +56,11 @@ function Register() {
       {!registrado ? (
         <div
           className="container"
-          style={{ height: "350px", width: "80%", marginBottom: "7%" }}
-        >
+          style={{ height: "350px", width: "80%", marginBottom: "7%" }}>
           <h3 style={{ textAlign: "center", marginTop: "30px" }}>Register</h3>
 
           <form className="form " style={{ height: "450px" }}>
-            <div className="mb-3">
-              
+            <div className="mb-3">  
               <label htmlFor="inputEmail" className="form-label">
                 Email address
               </label>
@@ -72,11 +70,10 @@ function Register() {
                 id="inputEmail"
                 onChange={handleInpuEmail}
               />
-              <div id="emailHelp" className="form-text">
+              <div className="form-text">
                 Tus datos no seran compartidos.
               </div>
             </div>
-            
             <div className="mb-3">
               <label htmlFor="inputUsername" className="form-label">
                 User name

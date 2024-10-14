@@ -1,6 +1,7 @@
 export const pizzas = [
   {
     id: "1",
+    imagen: URL="../",
     nombre: "Napolitana",
     precio: 100,
     ingredientes:{},
@@ -35,14 +36,14 @@ export const pizzas = [
 
   },
   {
-    id: "4",
+    id: "6",
     nombre: "Super Burguer",
     precio: 5000,
     ingredientes:{},
 
   },
   {
-    id: "5",
+    id: "7",
     nombre: "Chilean Style",
     precio: 9000,
     ingredientes:{},
