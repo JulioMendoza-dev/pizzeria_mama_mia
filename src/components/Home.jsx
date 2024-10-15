@@ -4,9 +4,9 @@ import Row from "./Row";
 import pizzas from "../assets/pizzas";
 import { Col } from "react-bootstrap";
 import Login from "./pages/Login";
-import {Container} from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
- const Home = () => {
+const Home = () => {
   const mapeoPizzas = pizzas.map((pizza) => {
     return (
       <Col key={pizza.id}>
@@ -14,20 +14,22 @@ import {Container} from "react-bootstrap";
       </Col>
     );
   });
+
   return (
     <>
       <Header />
       <div className="fondo bg-success-subtle">
+        <Login />
         <div className="container">
-          <Login />
           <Container>
             <Row className="g-4" xs={1} md={2} lg={4}>
-              {mapeoPizzas}
+             console.log({mapeoPizzas}) 
             </Row>
           </Container>
         </div>
       </div>
     </>
   );
-}
-export default Home
+};
+
+export default Home;

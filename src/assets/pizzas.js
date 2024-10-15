@@ -4,49 +4,49 @@ export const pizzas = [
     imagen: URL="../",
     nombre: "Napolitana",
     precio: 100,
-    ingredientes:{},
+    ingredientes:['jamon', 'queso', 'aceitunas'],
 
   },
   {
     id: "2",
     nombre: "Doble Peperoni",
     precio: 2000,
-    ingredientes:{},
+    ingredientes:['doble queso', 'doble aceituna'],
 
   },
   {
     id: "3",
     nombre: "hawaiiana",
     precio: 3000,
-    ingredientes:{},
+    ingredientes:[],
 
   },
   {
     id: "4",
-    nombre: "Veggi",
+    nombre: "Super Veggi",
     precio: 5000,
-    ingredientes:{},
+    ingredientes:['queso vegano','pimenton','choclo','aceitunas','tomate'],
 
   },
   {
     id: "5",
     nombre: "Vegetariana",
-    precio: 700,
-    ingredientes:{},
+    precio: 7500,
+    ingredientes:['pimenton','choclo','aceitunas','tomate','cebolla'],
 
   },
   {
     id: "6",
     nombre: "Super Burguer",
-    precio: 5000,
-    ingredientes:{},
+    precio: 8000,
+    ingredientes:['bolitas de carne', 'queso mozarella','tocino','cebolla'],
 
   },
   {
     id: "7",
     nombre: "Chilean Style",
-    precio: 9000,
-    ingredientes:{},
+    precio: 10000,
+    ingredientes:['tomate', 'chorizo','cebolla morada', 'BBQ'],
 
   },
 ];

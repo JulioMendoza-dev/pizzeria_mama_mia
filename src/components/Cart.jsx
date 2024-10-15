@@ -1,12 +1,14 @@
-import pizzas from "../assets/pizzas";    
+import { useState } from "react";
+import CardPizza from "./CardPizza";    
 
 function Cart() {
-   const mapeoPizza = pizzas.map(()=>{
-      return 
-
-   })
-  return <div>Cart</div>;
+const [Cart, setCart] =useState(CardPizza)
+const total = 0;
+  return 
+  
+  <div>Cart</div>;
    
 }
 
 export default Cart;
+ 

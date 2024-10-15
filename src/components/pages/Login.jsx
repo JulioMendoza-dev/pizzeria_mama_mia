@@ -18,20 +18,21 @@ function Login() {
   };
 
   return (
-    <div>
-      <h3 style={{ textAlign: "center", paddingTop: "20px" }}>Login</h3>
+    <div style={{ textAlign: "center"}}>
+      <h3>Login</h3>
       <hr />
 
-      <form className="form mb-3">
+      <form className="form pb-3" >
         <div className="mb-3">
           <label htmlFor="inputEmail" className="form-label">
             Email address
           </label>
           <input
+            style={{width:"70%", margin:"auto"}}
             type="email"
             placeholder="Enter your email"
             className="form-control"
-            id="inputEmail"
+            id="inputEmailLogin"
             onChange={handleInputEamail}
             aria-describedby="emailHelp"
           />
@@ -41,10 +42,11 @@ function Login() {
             Password
           </label>
           <input
+           style={{width:"70%", margin:"auto"}}
             type="password"
             placeholder="Enter your password"
             className="form-control"
-            id="inputPassword"
+            id="inputPasswordLogin"
             onChange={handleInputPassword}
           />
         </div>

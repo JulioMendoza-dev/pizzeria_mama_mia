@@ -56,8 +56,8 @@ function Register() {
       {!registrado ? (
         <div
           className="container"
-          style={{ height: "350px", width: "80%", marginBottom: "7%" }}>
-          <h3 style={{ textAlign: "center", marginTop: "30px" }}>Register</h3>
+          style={{ height: "350px", width: "80%", marginBottom: "10%", textAlign:"center"}}>
+          <h3 style={{ textAlign: "center", paddingTop:"2%"}}>Register</h3>
 
           <form className="form " style={{ height: "450px" }}>
             <div className="mb-3">  
@@ -67,7 +67,7 @@ function Register() {
               <input
                 type="email"
                 className="form-control"
-                id="inputEmail"
+                id="inputEmailRegister" 
                 onChange={handleInpuEmail}
               />
               <div className="form-text">
@@ -92,7 +92,7 @@ function Register() {
               <input
                 type="password"
                 className="form-control"
-                id="inputPassword"
+                id="inputPasswordRegister"
                 onChange={handleInputPassword}
               />
             </div>

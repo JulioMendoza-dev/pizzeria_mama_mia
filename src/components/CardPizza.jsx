@@ -2,7 +2,7 @@ import { Button, Card } from "react-bootstrap";
 import PropTypes from "prop-types";
 
 const CardPizza = ({ pizza }) => {
-const { nombre, precio, ingredientes } = pizza;
+const {nombre, precio, ingredientes } = pizza;
 
   return (
     <>
