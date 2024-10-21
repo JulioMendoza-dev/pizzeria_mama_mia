@@ -1,16 +1,21 @@
 import Header from "./Header";
 import CardPizza from "./CardPizza";
-import Row from "./Row";
 import pizzas from "../assets/pizzas";
 import { Col } from "react-bootstrap";
-import Login from "./pages/Login";
+// import Login from "./pages/Login";
+// import Register from "./pages/Register";
 import { Container } from "react-bootstrap";
 
 const Home = () => {
   const mapeoPizzas = pizzas.map((pizza) => {
     return (
       <Col key={pizza.id}>
-        <CardPizza pizza={pizza} />
+        <CardPizza        
+          pizza={pizza.id}
+          nombre={pizza.nombre}
+          precio={pizza.precio}
+          ingredientes={pizza.ingredientes}
+         />        
       </Col>
     );
   });
@@ -19,17 +24,14 @@ const Home = () => {
     <>
       <Header />
       <div className="fondo bg-success-subtle">
-        <Login />
         <div className="container">
-          <Container>
-            <Row className="g-4" xs={1} md={2} lg={4}>
-             console.log({mapeoPizzas}) 
-            </Row>
-          </Container>
+          {/* <Login /> */}
+          {/* <Register /> */}
+
+          <Container>{mapeoPizzas}</Container>
         </div>
       </div>
     </>
   );
 };
-
 export default Home;

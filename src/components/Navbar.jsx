@@ -4,6 +4,7 @@ import Cart from "./Cart";
 function Navbar() {
   const total = <Cart />;
   const token = false;
+  
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-dark">

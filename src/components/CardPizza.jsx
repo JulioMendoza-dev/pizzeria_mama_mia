@@ -1,9 +1,11 @@
+import react from "react";
 import { Button, Card } from "react-bootstrap";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
+import pizzas from "../assets/pizzas";
 
-const CardPizza = ({ pizza }) => {
-const {nombre, precio, ingredientes } = pizza;
-
+const CardPizza = (props) => {
+  
+  const {nombre, precio, ingredientes} = props
   return (
     <>
       <Card>
@@ -16,7 +18,9 @@ const {nombre, precio, ingredientes } = pizza;
               currency: "CLP",
             }).format(precio)}
           </Card.Text>
-          <Card.Text>{ingredientes}</Card.Text>
+          <Card.Text>{ingredientes.map((i)=>{
+            return <li key={i}>{i}</li>
+          })}</Card.Text>
           <Button
             variant="primary"
             style={{ marRight: "20%", alignContent: "flex-end" }}
@@ -33,15 +37,6 @@ const {nombre, precio, ingredientes } = pizza;
       </Card>
     </>
   );
-};
-
-CardPizza.propTypes = {
-  producto: PropTypes.shape({
-    id: PropTypes.string,
-    nombre: PropTypes.string,
-    precio: PropTypes.number,
-    ingredientes: PropTypes.string,
-  }),
 };
 
 export default CardPizza;

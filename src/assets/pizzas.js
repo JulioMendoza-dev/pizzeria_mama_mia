@@ -1,7 +1,6 @@
-export const pizzas = [
+const pizzas = [
   {
     id: "1",
-    imagen: URL="../",
     nombre: "Napolitana",
     precio: 100,
     ingredientes:['jamon', 'queso', 'aceitunas'],
@@ -11,14 +10,14 @@ export const pizzas = [
     id: "2",
     nombre: "Doble Peperoni",
     precio: 2000,
-    ingredientes:['doble queso', 'doble aceituna'],
+    ingredientes:['doble queso', 'doble peperoni'],
 
   },
   {
     id: "3",
     nombre: "hawaiiana",
     precio: 3000,
-    ingredientes:[],
+    ingredientes:['piña','jamon','mozarella'],
 
   },
   {
@@ -42,12 +41,6 @@ export const pizzas = [
     ingredientes:['bolitas de carne', 'queso mozarella','tocino','cebolla'],
 
   },
-  {
-    id: "7",
-    nombre: "Chilean Style",
-    precio: 10000,
-    ingredientes:['tomate', 'chorizo','cebolla morada', 'BBQ'],
 
-  },
 ];
  export default pizzas
