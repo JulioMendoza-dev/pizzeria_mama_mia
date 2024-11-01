@@ -14,8 +14,6 @@ const Home = () => {
   //     setCart((anterior)=>[...anterior, cartPizza])
   // }
 
-
-
   const mapeoPizzas = pizzas.map((pizza) => {
     return (
       <Col key={pizza.id}>
@@ -29,7 +27,6 @@ const Home = () => {
       </Col>
     );
   });
-
 
   return (
     <>
