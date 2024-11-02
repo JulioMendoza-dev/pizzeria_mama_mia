@@ -1,15 +1,15 @@
 import { Button, Card } from "react-bootstrap";
-import cartPizzas from "../assets/cartPizza";
 // import PropTypes from "props-types";
 
-const CardPizza = (props) => {
-  const { nombre, precio, ingredientes } = props;
+const Pizza = (props) => {
+  const { imagen, nombre, descripcion, precio, ingredientes } = props;
   return (
     <>
       <Card>
-        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Img src={imagen} />
         <Card.Body>
           <Card.Title>{nombre}</Card.Title>
+          <Card.Title>{descripcion}</Card.Title>
           <Card.Text>
             {new Intl.NumberFormat("es-CL", {
               style: "currency",
@@ -43,5 +43,4 @@ const CardPizza = (props) => {
 //   })
 // }
 
-export default CardPizza;
-
+export default Pizza;
