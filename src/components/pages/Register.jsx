@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import  Navbar  from "../Navbar";
 
 function Register() {
   const [inputEmail, setInputEmail] = useState("");
@@ -53,6 +54,7 @@ function Register() {
 
   return (
     <>
+    <Navbar/>
       {!registrado ? (
         <div
           className="container"

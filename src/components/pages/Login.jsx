@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Navbar from "../Navbar";
+
 
 function Login() {
   const [inputEmail, setInputEmail] = useState("");
@@ -18,7 +20,9 @@ function Login() {
   };
 
   return (
+    
     <div style={{ textAlign: "center"}}>
+      <Navbar/>
       <h3>Login</h3>
       <hr />
 

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import cartPizzas from "../assets/cartPizza";
-import pizzas from "../assets/pizzas";
+import Navbar from "../Navbar";
 
 function Cart() {
-  const [cart, setCart] = useState(cartPizzas);
+  const [cart, setCart] = useState([]);
   const [totalCarro, setTotalCarro] = useState(0);
 
   useEffect(() => {
@@ -47,6 +46,8 @@ function Cart() {
 
   return (
     <>
+    <Navbar/>
+    
       <div>
         <div>
           <label htmlFor="">Total de la compra: {totalCarro}</label>

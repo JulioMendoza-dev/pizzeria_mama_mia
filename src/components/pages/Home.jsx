@@ -1,13 +1,9 @@
-import Header from "./Header";
-import CardPizza from "./Pizza";
-import pizzas from "../assets/pizzas";
-import { Col } from "react-bootstrap";
-// import cartPizzas from "../assets/cartPizza";
-// import Login from "./pages/Login";
-// import Register from "./pages/Register";
+import Header from "../Header";
+import Pizza from "./Pizza";
+import { Col, Row } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import { useEffect, useState } from "react";
-// import { useState } from "react";
+import Navbar from "../Navbar";
 
 const Home = () => {
   const [listadoPizzas, setListadoPizzas] = useState([]);
@@ -22,17 +18,16 @@ const Home = () => {
 
   return (
     <>
+    <Navbar/>
       <Header />
       <div className="fondo bg-success-subtle ">
-        <div className="container">
-          {/* <Login /> */}
-          {/* <Register /> */}
-
+        <div className="container ">
           <Container >
             {listadoPizzas.map((pizza) => {
               return (
+                <Row >
                 <Col key={pizza.id}>
-                  <CardPizza
+                  <Pizza 
                     imagen={pizza.img}
                     pizza={pizza.id}
                     nombre={pizza.name}
@@ -41,6 +36,8 @@ const Home = () => {
                     ingredientes={pizza.ingredients}
                   />
                 </Col>
+              </Row>
+
               );
             })}
           </Container>
