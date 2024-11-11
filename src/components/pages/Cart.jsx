@@ -1,86 +1,53 @@
-import React, { useEffect, useState } from "react";
-import Navbar from "../Navbar";
+import React, { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
-function Cart() {
-  const [cart, setCart] = useState([]);
-  const [totalCarro, setTotalCarro] = useState(0);
-
-  useEffect(() => {
-    clacularTotal();
-  });
-
-  const clacularTotal = () => {
-    let total = 0;
-
-    cart.forEach((itemDelCarro) => {
-      total += itemDelCarro.precio * itemDelCarro.cantidad;
-    });
-
-    console.log(total);
-    setTotalCarro(total);
-  };
-
-  const sumarCantidad = (id) => {
-    const newCarrito = cart.map((itemDelCarro) => {
-      if (itemDelCarro.id === id) {
-        itemDelCarro.cantidad = itemDelCarro.cantidad + 1;
-      }
-      return itemDelCarro;
-    });
-    setCart(newCarrito);
-  };
-
-  const restarCantidad = (id) => {
-    const newCarrito = cart
-      .map((itemDelCarro) => {
-        if (itemDelCarro.id === id) {
-          itemDelCarro.cantidad = itemDelCarro.cantidad - 1;
-        }
-        return itemDelCarro;
-      })
-      .filter((itemDelCarrito) => {
-        return itemDelCarrito.cantidad > 0;
-      });
-    setCart(newCarrito);
-  };
+const Cart = () => {
+  const { cart, decreaseQuantity, getTotalPrice, increaseQuantity } = useContext(CartContext);
 
   return (
-    <>
-    <Navbar/>
-    
-      <div>
+    <div className="fondo bg-light">
+      <Container>
+        <h2>Mi Carrito</h2>
+        {cart.length === 0 ? (
+          <p>No hay productos en el carrito.</p>
+        ) : (
+          <Row xs={1} sm={2} md={3} lg={3} xl={3} className="g-4">
+            {cart.map((item) => (
+              <Col key={item.id}>
+                <Card>
+                  <Card.Img variant="top" src={item.img} />
+                  <Card.Body>
+                    <Card.Title>{item.name}</Card.Title>
+                    <Card.Text >Cantidad: {item.cantidad}</Card.Text>
+                    <div style={{}}>
+                    <Button
+                      variant="danger"
+                      onClick={() => decreaseQuantity(item.id)} // Eliminar del carrito
+                    >
+                      Quitar
+                    </Button>
+                    <Button
+                      variant="danger"
+                      onClick={() => increaseQuantity(item.id)} // Eliminar del carrito
+                    >
+                      Agregar
+                    </Button>
+
+                    </div>
+
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        )}
         <div>
-          <label htmlFor="">Total de la compra: {totalCarro}</label>
+          <h4>Total de la compra: ${getTotalPrice()}</h4> {/* Mostrar el total de la compra correctamente */}
         </div>
-        {cart.map((itemDelCarro) => {
-          return (
-            <>
-              <img src="" />
-              <label>Nombre: {itemDelCarro.nombre}</label>
-              <label>Precio: {itemDelCarro.precio}</label>
-              <label>Cantidad: {itemDelCarro.cantidad}</label>
-              <div>
-                <input
-                  type="button"
-                  value="+"
-                  onClick={() => sumarCantidad(itemDelCarro.id)}
-                />
-                <input
-                  type="button"
-                  value="-"
-                  onClick={() => restarCantidad(itemDelCarro.id)}
-                />
-              </div>
-              <br />
-            </>
-          );
-        })}
-        <div>
-          <input type="button" value="Continuar con la compra" />
-        </div>
-      </div>
-    </>
+      </Container>
+    </div>
   );
-}
+};
 
 export default Cart;

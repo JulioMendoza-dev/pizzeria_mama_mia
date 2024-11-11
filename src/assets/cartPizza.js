@@ -1,7 +1,7 @@
 const cartPizzas = [
     {   id: "1",
         nombre: "Napolitana",
-        precio: 100,
+        precio: 10000,
         cantidad:1
     },
     {   id: "2",

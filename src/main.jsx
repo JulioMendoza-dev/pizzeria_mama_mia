@@ -1,57 +1,40 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-// import App from './App.jsx'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import Home from './components/pages/Home.jsx';
-import Register from './components/pages/Register.jsx';
-import Login from './components/pages/Login.jsx';
-import Cart from './components/pages/Cart.jsx';
-import Pizza from './components/pages/Pizza.jsx';
-import Profile from './components/pages/Profile.jsx';
-import NotFound from './components/pages/NotFound.jsx';
-import { Navbar } from 'react-bootstrap';
+// main.jsx
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./App";
+import Home from "./components/pages/Home";
+import Register from "./components/pages/Register";
+import Login from "./components/pages/Login";
+import Cart from "./components/pages/Cart";
+import Pizza from "./components/pages/Pizza";
+import Profile from "./components/pages/Profile";
+import NotFound from "./components/pages/NotFound";
+import CounterProvider from "./context/CounterContext";
+import { CartProvider } from "./context/CartContext";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div><Home/></div>,
+    element: <App />, // Usa App como el contenedor principal
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/register", element: <Register /> },
+      { path: "/login", element: <Login /> },
+      { path: "/cart", element: <Cart /> },
+      { path: "/pizza/p001", element: <Pizza /> },
+      { path: "/profile", element: <Profile /> },
+      { path: "*", element: <NotFound /> },
+    ],
   },
-  {
-    path: "/register",
-    element: <div><Register/></div>,
-  },
-  {
-    path: "/login",
-    element: <div><Login/></div>,
-  },
-  {
-    path: "/cart",
-    element: <div><Cart/></div>,
-  },
-  {
-    path: "/pizza/p001",
-    element: <div><Pizza/></div>,
-  },
-  {
-    path: "/profile",
-    element: <div><Profile/></div>,
-  },
-  {
-    path: "/404",
-    element: <div><NotFound/></div>,
-  },
-  {
-    path: "*",
-    element: <div><NotFound/></div>,
-  },
-
 ]);
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={ router } />
-    </StrictMode>,
-)
+    <CounterProvider>
+      <CartProvider>
+        <RouterProvider router={router} />
+      </CartProvider>
+    </CounterProvider>
+  </StrictMode>
+);
