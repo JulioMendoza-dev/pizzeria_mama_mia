@@ -2,23 +2,29 @@ function Header() {
   return (
     <>
       <div
-        className="titulo-comentario text-center pb-3"
+        className="titulo-comentario text-center"
         style={{
-          width: "100%",
-          height: "400px",
+          height: "200px",
           backgroundImage: `url(/pizza-header-2.jpg)`,
           backgroundSize: "cover",
           color: "white",
+          width:"100wh"
+          
         }}
       >
-        <h1 style={{ fontSize: "3em", paddingTop: "90px" }}>
+        <h1 style={{ 
+          fontSize: "3em", 
+          paddingTop: "50px",
+          }}>
           ___Pizzeria Mamma Mia___
         </h1>
-        <br />
-        <p style={{ fontSize: "2em", paddingTop: "30px" }}>
+
+        <p style={{ 
+          fontSize: "1em", 
+          margin:"10px" 
+          }}>
           ¡Tenemos las mejores pizzas que puedes encontrar!
         </p>
-        <hr />
       </div>
     </>
   );

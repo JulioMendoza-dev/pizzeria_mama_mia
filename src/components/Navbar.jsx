@@ -6,7 +6,7 @@ function Navbar() {
   const { getTotalPrice } = useContext(CartContext); // Accede a la función getTotalPrice desde el contexto
 
   return (
-    <nav className="navbar navbar-expand-lg bg-dark">
+    <nav className="navbar navbar-expand-lg bg-dark" >
       <div className="container-fluid">
         <Link className="navbar-brand text-white" to="/">
           <h4>Mamma - mia !</h4>
@@ -38,12 +38,12 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link className="nav-link text-white" to="/login">
-                Iniciar sesión
+                Iniciar Sesión
               </Link>
             </li>
             {/* Enlace al carrito con el total */}
             <li className="nav-item">
-              <Link className="nav-link text-white " to="/cart">
+              <Link className="nav-link text-white" to="/cart">
             
                 Carrito: ${getTotalPrice()} {/* Muestra el total de la compra */}
               </Link>

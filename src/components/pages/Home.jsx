@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import Header from "../Header"
 
 const Home = () => {
   const [listadoPizzas, setListadoPizzas] = useState([]);
@@ -15,17 +16,19 @@ const Home = () => {
 
   return (
     
-    <div className="fondo bg-success-subtle">
-      <div className="container">
-        <Container >
-          <Row xs={1} sm={2} md={3} lg={3} xl={3} className="g-4">
+    <div className="fondo bg-success-subtle" >
+      <div className="container" >
+        <Container  >
+          <Header style="100%"/>
+          <Row xs={1} sm={2} md={3} lg={3} xl={3} style={{marginTop:"1px"}} className="g-4">
             {listadoPizzas.map((pizza) => (
-              <Col key={pizza.id}>
-                <Card>
+              <Col  key={pizza.id}>
+
+                <Card >
                   <Card.Img variant="top" src={pizza.img} />
-                  <Card.Body>
+                  <Card.Body style={{ overflow:'hidden' }}>
                     <Card.Title>{pizza.name}</Card.Title>
-                    <Card.Text>{pizza.desc}</Card.Text>
+                    <Card.Text style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{pizza.desc}</Card.Text>
                     <Button
                       variant="primary"
                       onClick={() => addToCart(pizza)} // Agregamos la pizza al carrito cuando se hace click

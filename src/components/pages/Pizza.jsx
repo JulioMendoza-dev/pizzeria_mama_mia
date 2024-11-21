@@ -5,7 +5,7 @@ const Pizza = (props) => {
   const { imagen, nombre, descripcion, precio, ingredientes } = props;
   return (
     <>
-      <Card>
+      <Card >
         <Card.Img src={imagen} />
         <Card.Body>
           <Card.Title>{nombre}</Card.Title>
