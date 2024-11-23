@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useContext } from "react";
-import { CartContext } from "../../context/CartContext";
+import { CartContext } from "./CartContext";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import Header from "../Header"
+import Header from "./Header"
 
 const Home = () => {
   const [listadoPizzas, setListadoPizzas] = useState([]);

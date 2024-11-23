@@ -1,40 +1,16 @@
-// main.jsx
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App";
-import Home from "./components/pages/Home";
-import Register from "./components/pages/Register";
-import Login from "./components/pages/Login";
-import Cart from "./components/pages/Cart";
-import Pizza from "./components/pages/Pizza";
-import Profile from "./components/pages/Profile";
-import NotFound from "./components/pages/NotFound";
-import CounterProvider from "./context/CounterContext";
-import { CartProvider } from "./context/CartContext";
+// src/main.jsx
+import { createRoot } from 'react-dom/client';
+import App from './App';
+import { CartProvider } from './components/CartContext';
+import { UserProvider } from './components/UserContext';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />, // Usa App como el contenedor principal
-    children: [
-      { path: "/", element: <Home /> },
-      { path: "/register", element: <Register /> },
-      { path: "/login", element: <Login /> },
-      { path: "/cart", element: <Cart /> },
-      { path: "/pizza/p001", element: <Pizza /> },
-      { path: "/profile", element: <Profile /> },
-      { path: "*", element: <NotFound /> },
-    ],
-  },
-]);
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <CounterProvider>
-      <CartProvider>
-        <RouterProvider router={router} />
-      </CartProvider>
-    </CounterProvider>
-  </StrictMode>
+root.render(
+  <UserProvider>
+    <CartProvider>
+      <App />
+    </CartProvider>
+  </UserProvider>
 );
